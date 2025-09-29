@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhamad Barzani - Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="particles-container"></div>
+  
+  <header>
+    <div class="container header-container">
+      <div class="header-top">
+        <h1>Muhamad Barzani</h1>
+        <p class="tagline" id="typewriter">
+          <span class="typewriter-text"></span>
+          <span class="cursor">|</span>
+        </p>
+      </div>
+
+      <div class="header-socials" aria-label="Social links">
+        <a href="https://github.com/MuhamadBarzani" target="_blank" class="social-link github" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-link instagram" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <div class="header-actions">
+        <button id="darkModeToggle" aria-pressed="false">🌙 Dark Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="profile-image">
+          <img src="assets/image.png" alt="Muhamad Barzani Photo" />
+        </div>
+        <div>
+          <p>Hello! I'm Muhamad Barzani, a creative and detail-oriented software engineer with experience in <strong>Flutter</strong>, <strong>Java</strong>, <strong>C++</strong>, and <strong>front-end web development</strong>. I also have a background in <strong>3D graphics design</strong>, from commercial projects to environment modeling.</p>
+          <p>I'm passionate about technology, problem-solving, and continuous learning. I enjoy building apps, designing databases, and exploring new technologies that push creativity and performance forward.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Skills & Interests</h2>
+      <div class="skills">
+        <span class="skill-tag">Flutter</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">Web Development</span>
+        <span class="skill-tag">Game Development</span>
+        <span class="skill-tag">3D Graphics Design</span>
+        <span class="skill-tag">Database Design</span>
+        <span class="skill-tag">Problem Solving</span>
+        <span class="skill-tag">Critical Thinking</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p>I'd love to hear from you! You can reach out through any of the following:</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <strong>GitHub</strong>
+          <a href="https://github.com/MuhamadBarzani" target="_blank">@MuhamadBarzani</a>
+        </div>
+        <div class="contact-item">
+          <strong>Website</strong>
+          <a href="https://muhamadbarzani.github.io" target="_blank">muhamadbarzani.github.io</a>
+        </div>
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:barzandolamari3@gmail.com">barzandolamari3@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Muhamad Barzani. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Dark mode functionality
+      const toggleButton = document.getElementById('darkModeToggle');
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark') {
+        document.body.classList.add('dark-mode');
+        toggleButton.textContent = '☀️ Light Mode';
+        toggleButton.setAttribute('aria-pressed', 'true');
+      } else {
+        document.body.classList.remove('dark-mode');
+        toggleButton.textContent = '🌙 Dark Mode';
+        toggleButton.setAttribute('aria-pressed', 'false');
+      }
+
+      toggleButton.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark-mode');
+        if (isDark) {
+          localStorage.setItem('theme', 'dark');
+          toggleButton.textContent = '☀️ Light Mode';
+          toggleButton.setAttribute('aria-pressed', 'true');
+        } else {
+          localStorage.setItem('theme', 'light');
+          toggleButton.textContent = '🌙 Dark Mode';
+          toggleButton.setAttribute('aria-pressed', 'false');
+        }
+      });
+
+      // Animated particles
+      function createParticles() {
+        const container = document.querySelector('.particles-container');
+        const particleCount = 25;
+
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'particle';
+          
+          // Random positioning and timing
+          particle.style.left = Math.random() * 100 + '%';
+          particle.style.animationDelay = Math.random() * 5 + 's';
+          particle.style.animationDuration = (Math.random() * 5 + 8) + 's';
+          
+          // Fixed size for visibility
+          const size = Math.random() * 4 + 4;
+          particle.style.width = size + 'px';
+          particle.style.height = size + 'px';
+          
+          container.appendChild(particle);
+        }
+      }
+
+      // Typewriter effect
+      function typeWriter() {
+        const text = "Software Engineer | Frontend Developer | 3D Designer";
+        const typewriterElement = document.querySelector('.typewriter-text');
+        let index = 0;
+
+        function type() {
+          if (index < text.length) {
+            typewriterElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 100);
+          }
+        }
+
+        // Start typing after a short delay
+        setTimeout(type, 1000);
+      }
+
+      createParticles();
+      typeWriter();
+    });
+  </script>
+</body>
+</html>
