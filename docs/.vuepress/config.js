@@ -17,7 +17,7 @@ export default defineUserConfig({
     
     navbar: [
       { text: 'Home', link: '/' },
-      { text: 'Projects', link: '/get-started' },
+  { text: 'Projects', link: '/projects' },
       { text: 'About', link: '/#about-me' },
       { text: 'Skills', link: '/#skills-interests' },
       { text: 'Contact', link: '/#contact' }
@@ -25,12 +25,15 @@ export default defineUserConfig({
 
     sidebar: false,
 
-    // Social links
-    repo: 'MuhamadBarzani',
-    repoLabel: 'GitHub',
+  // Social links
+  // Removed `repo` and `repoLabel` to hide the GitHub button in the navbar
 
-    // Edit links
-    editLink: false,
+  // Edit links
+  editLink: false,
+
+  // Disable git metadata in page footer
+  lastUpdated: false,
+  contributors: false,
 
     // Footer
     footer: '© 2025 Muhamad Barzani. All rights reserved.',

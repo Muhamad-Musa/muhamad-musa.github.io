@@ -53,4 +53,3 @@ Interested in collaboration or have questions about my work? Feel free to reach 
 
 ---
 
-*This page showcases my technical journey and projects. I'm always excited to discuss new opportunities and challenges!*

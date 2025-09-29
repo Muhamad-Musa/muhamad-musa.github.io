@@ -16,7 +16,7 @@
       
       <!-- Social Links -->
       <div class="social-links">
-        <a href="https://github.com/MuhamadBarzani" target="_blank" class="social-link github" aria-label="GitHub">
+        <a href="https://github.com/muhamad-musa" target="_blank" class="social-link github" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
         <a href="https://www.linkedin.com" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
@@ -59,16 +59,31 @@
       <p>I'd love to hear from you! You can reach out through any of the following:</p>
       <div class="contact-info">
         <div class="contact-item">
-          <strong>GitHub</strong>
-          <a href="https://github.com/MuhamadBarzani" target="_blank">@MuhamadBarzani</a>
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-content">
+            <strong>GitHub</strong>
+            <a href="https://github.com/muhamad-musa" target="_blank">@muhamad-musa</a>
+          </div>
         </div>
         <div class="contact-item">
-          <strong>Website</strong>
-          <a href="https://muhamadbarzani.github.io" target="_blank">muhamadbarzani.github.io</a>
+          <div class="contact-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="contact-content">
+            <strong>Website</strong>
+            <a href="https://muhamad-musa.github.io" target="_blank">muhamad-musa.github.io</a>
+          </div>
         </div>
         <div class="contact-item">
-          <strong>Email</strong>
-          <a href="mailto:barzandolamari3@gmail.com">barzandolamari3@gmail.com</a>
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-content">
+            <strong>Email</strong>
+            <a href="mailto:barzandolamari3@gmail.com">barzandolamari3@gmail.com</a>
+          </div>
         </div>
       </div>
     </section>

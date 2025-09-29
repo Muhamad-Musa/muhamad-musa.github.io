@@ -1,5 +1,4 @@
-<template><div><meta http-equiv="refresh" content="0; url=/projects" /><p>If you are not redirected automatically, follow this link: <a href="/projects">Projects</a>.</p>
-<h1 id="projects-experience" tabindex="-1"><a class="header-anchor" href="#projects-experience"><span>Projects &amp; Experience</span></a></h1>
+<template><div><h1 id="projects-experience" tabindex="-1"><a class="header-anchor" href="#projects-experience"><span>Projects &amp; Experience</span></a></h1>
 <p>Welcome to my projects showcase! Here you'll find information about my work and experience.</p>
 <h2 id="technical-skills" tabindex="-1"><a class="header-anchor" href="#technical-skills"><span>Technical Skills</span></a></h2>
 <h3 id="programming-languages" tabindex="-1"><a class="header-anchor" href="#programming-languages"><span>Programming Languages</span></a></h3>
