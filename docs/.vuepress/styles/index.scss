@@ -5,9 +5,89 @@
   --primary-color: #4a90ff;
   --text-color: #2c3e50;
   --bg-color: #ffffff;
-  --card-bg: #f8f9fa;
+  --card-bg: #13315e;
+  --card-border-color: #3a4f6f;
   --border-color: #e2e8f0;
   --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Layout & sizing */
+  --content-max-width: 1200px;
+  --section-margin-vertical: 2rem;
+  --page-padding-horizontal: 2rem;
+
+  /* Hero */
+  --hero-padding-top: 2rem;
+  --hero-padding-bottom: 1.5rem;
+  --hero-title-size: 3rem;
+  --hero-desc-size: 1.2rem;
+
+  /* Profile image */
+  --profile-size: 180px;
+  --profile-border-width: 4px;
+  --profile-border-radius: 50%;
+
+  /* Typewriter */
+  --typewriter-font-size: 1.1rem;
+  --cursor-blink-duration: 1s;
+
+  /* Social links */
+  --social-gap: 1.2rem;
+  --social-margin-vertical: 2rem;
+  --social-size: 50px;
+  --social-font-size: 1.5rem;
+  --social-github-bg: #333;
+  --social-linkedin-bg: #0077b5;
+  --social-instagram-gradient: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+
+  /* About */
+  --about-max-width: 800px;
+  --about-font-size: 1.05rem;
+  --about-line-height: 1.6;
+
+  /* Skills */
+  --skills-gap: 0.8rem;
+  --skill-padding-vert: 0.5rem;
+  --skill-padding-horz: 1rem;
+  --skill-radius: 25px;
+  --skill-font-size: 0.9rem;
+
+  /* Contact */
+  --contact-gap: 0.7rem;
+  --contact-max-width: 650px;
+  --contact-padding-vert: 1.2rem;
+  --contact-padding-horz: 1.5rem;
+  --contact-radius: 8px;
+  --contact-border-width: 1px;
+  --contact-hover-bg: #334d70;
+  --contact-link-color: #ffffff;
+  --contact-link-hover-color: #c0d8ff;
+
+  /* Buttons */
+  --action-padding-vert: 0.8rem;
+  --action-padding-horz: 2rem;
+  --action-font-size: 1rem;
+  --action-border-radius: 8px;
+  --action-hover-bg: #3b7de6;
+
+  /* Transitions & shadows */
+  --transition-ease: all 0.3s ease;
+  --box-shadow-1: 0 6px 25px;
+  --box-shadow-2: 0 10px 35px;
+  --box-shadow-3: 0 4px 15px;
+
+  /* Responsive small sizes */
+  --profile-size-sm: 150px;
+  --hero-title-size-sm: 2.5rem;
+  --social-size-sm: 45px;
+  --social-font-size-sm: 1.3rem;
+  --profile-margin-bottom: 1rem;
+  --hero-title-margin-bottom: 1rem;
+  --typewriter-margin: 1rem 0;
+  --contact-padding-vert-sm: 1.5rem;
+  --contact-icon-size: 1.5rem;
+  --contact-icon-min-width: 35px;
+  --section-heading-size: 2.5rem;
+  --page-padding-top: 1rem;
 }
 
 .dark {
@@ -15,9 +95,16 @@
   --primary-color: #5aa3ff;
   --text-color: #e2e8f0;
   --bg-color: #1a1a1a;
-  --card-bg: #2d2d2d;
+  --card-bg: #062041;
+  --card-border-color: #2d3e52;
   --border-color: #404040;
   --shadow-color: rgba(255, 255, 255, 0.1);
+  
+  /* Dark mode contact/button/link tokens */
+  --contact-hover-bg: #253342;
+  --contact-link-color: #7cb8ff;
+  --contact-link-hover-color: #a0c9ff;
+  
   /* Ensure base text color applies to page in dark mode */
   color: var(--text-color);
 }
@@ -83,38 +170,38 @@
 /* Custom Hero section */
 .custom-hero {
   /* reduced vertical padding to tighten spacing with following sections */
-  padding: 2rem 0 1.5rem 0;
+  padding: var(--hero-padding-top) 0 var(--hero-padding-bottom) 0;
   text-align: center;
 }
 
 .hero-profile-image {
-  margin-bottom: 1rem;
+  margin-bottom: var(--profile-margin-bottom);
 }
 
 .hero-profile-image img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: var(--profile-size);
+  height: var(--profile-size);
+  border-radius: var(--profile-border-radius);
   object-fit: cover;
-  border: 4px solid var(--primary-color);
-  box-shadow: 0 6px 25px var(--shadow-color);
-  transition: all 0.3s ease;
+  border: var(--profile-border-width) solid var(--primary-color);
+  box-shadow: var(--box-shadow-1) var(--shadow-color);
+  transition: var(--transition-ease);
 }
 
 .hero-profile-image img:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 35px var(--shadow-color);
+  box-shadow: var(--box-shadow-2) var(--shadow-color);
 }
 
 .custom-hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: var(--hero-title-size);
+  margin-bottom: var(--hero-title-margin-bottom);
   color: var(--text-color);
   font-weight: 700;
 }
 
 .custom-hero .description {
-  font-size: 1.2rem;
+  font-size: var(--hero-desc-size);
   color: var(--text-color);
 }
 
@@ -123,17 +210,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem 0;
+  margin: var(--typewriter-margin);
 }
 
 .typewriter-text {
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-  font-size: 1.1rem;
+  font-size: var(--typewriter-font-size);
   color: var(--primary-color);
 }
 
 .cursor {
-  animation: blink 1s infinite;
+  animation: blink var(--cursor-blink-duration) infinite;
   font-weight: bold;
   color: var(--primary-color);
 }
@@ -147,40 +234,40 @@
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
-  margin: 2rem 0;
+  gap: var(--social-gap);
+  margin: var(--social-margin-vertical) 0;
 }
 
 .social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: var(--social-size);
+  height: var(--social-size);
+  border-radius: var(--profile-border-radius);
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 1.5rem;
+  font-size: var(--social-font-size);
 }
 
 .social-link.github {
-  background: #333;
-  color: white;
+  background: var(--social-github-bg);
+  color: var(--social-icon-color, white);
 }
 
 .social-link.linkedin {
-  background: #0077b5;
-  color: white;
+  background: var(--social-linkedin-bg);
+  color: var(--social-icon-color, white);
 }
 
 .social-link.instagram {
-  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-  color: white;
+  background: var(--social-instagram-gradient);
+  color: var(--social-icon-color, white);
 }
 
 .social-link:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 15px var(--shadow-color);
+  box-shadow: var(--box-shadow-3) var(--shadow-color);
 }
 
 .social-link::after {
@@ -194,17 +281,17 @@
 
 /* About section */
 .about-content {
-  max-width: 800px;
+  max-width: var(--about-max-width);
   /* reduce vertical spacing between sections */
-  margin: 1rem auto;
+  margin: var(--about-margin, 1rem) auto;
   text-align: center;
 }
 
 .about-content p {
   text-align: center;
   margin: 1rem 0;
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: var(--about-font-size);
+  line-height: var(--about-line-height);
   color: var(--text-color);
 }
 
@@ -212,7 +299,7 @@
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: var(--skills-gap);
   margin: 1rem 0;
   justify-content: center;
 }
@@ -220,51 +307,51 @@
 .skill-tag {
   background: var(--primary-color);
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  font-size: 0.9rem;
+  padding: var(--skill-padding-vert) var(--skill-padding-horz);
+  border-radius: var(--skill-radius);
+  font-size: var(--skill-font-size);
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: var(--transition-ease);
   cursor: default;
 }
 
 .skill-tag:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px var(--shadow-color);
+  box-shadow: var(--box-shadow-3) var(--shadow-color);
 }
 
 /* Contact section */
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--contact-gap);
   margin: 1.5rem auto;
-  max-width: 600px;
+  max-width: var(--contact-max-width);
 }
 
 .contact-item {
-  background: #2a3f5f;
+  background: var(--card-bg);
   color: white;
-  padding: 1.2rem 1.5rem;
-  border-radius: 8px;
-  border: 1px solid #3a4f6f;
+  padding: var(--contact-padding-vert) var(--contact-padding-horz);
+  border-radius: var(--contact-radius);
+  border: var(--contact-border-width) solid var(--card-border-color);
   text-align: left;
-  transition: all 0.3s ease;
+  transition: var(--transition-ease);
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
 .contact-item:hover {
-  background: #334d70;
+  background: var(--contact-hover-bg);
   transform: translateX(4px);
   border-color: var(--primary-color);
 }
 
 .contact-icon {
-  font-size: 1.5rem;
+  font-size: var(--contact-icon-size);
   color: var(--primary-color);
-  min-width: 35px;
+  min-width: var(--contact-icon-min-width);
   text-align: center;
 }
 
@@ -276,12 +363,12 @@
   display: block;
   margin-bottom: 0.2rem;
   color: white;
-  font-size: 1rem;
+  font-size: var(--contact-strong-font-size, 1rem);
   font-weight: 600;
 }
 
 .contact-item a {
-  color: #a0c4ff;
+  color: var(--contact-link-color);
   text-decoration: none;
   font-weight: 400;
   font-size: 0.95rem;
@@ -289,7 +376,7 @@
 }
 
 .contact-item a:hover {
-  color: #c0d8ff;
+  color: var(--contact-link-hover-color);
   text-decoration: none;
 }
 
@@ -303,13 +390,13 @@
 
 .action-button {
   display: inline-block;
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
+  padding: var(--action-padding-vert) var(--action-padding-horz);
+  font-size: var(--action-font-size);
   font-weight: 500;
   text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border-radius: var(--action-border-radius);
+  transition: var(--transition-ease);
+  border: var(--action-border-width, 2px) solid transparent;
 }
 
 .action-button.primary {
@@ -318,7 +405,7 @@
 }
 
 .action-button.primary:hover {
-  background-color: #3b7de6;
+  background-color: var(--action-hover-bg);
   transform: translateY(-2px);
   box-shadow: 0 4px 15px var(--shadow-color);
 }
@@ -331,12 +418,12 @@
   }
   
   .profile-image img {
-    width: 150px;
-    height: 150px;
+    width: var(--profile-size-sm);
+    height: var(--profile-size-sm);
   }
   
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: var(--hero-title-size-sm);
   }
   
   .social-links {
@@ -344,9 +431,9 @@
   }
   
   .social-link {
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
+    width: var(--social-size-sm);
+    height: var(--social-size-sm);
+    font-size: var(--social-font-size-sm);
   }
   
   .contact-info {
@@ -355,13 +442,13 @@
   }
   
   .contact-item {
-    padding: 1.5rem;
+    padding: var(--contact-padding-vert-sm);
     gap: 1rem;
   }
   
   .contact-icon {
-    font-size: 1.5rem;
-    min-width: 35px;
+    font-size: var(--contact-icon-size);
+    min-width: var(--contact-icon-min-width);
   }
 }
 
@@ -391,14 +478,14 @@
 /* Center align all text content */
 .personal-website {
   text-align: center;
-  max-width: 1200px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--page-padding-horizontal);
 }
 
 .personal-website section {
   /* overall section spacing reduced to bring sections closer */
-  margin: 2rem 0;
+  margin: var(--section-margin-vertical) 0;
   text-align: center;
 }
 
@@ -406,7 +493,7 @@
   text-align: center;
   margin: 2rem 0 1rem 0;
   color: var(--text-color);
-  font-size: 2.5rem;
+  font-size: var(--section-heading-size);
   font-weight: 600;
 }
 
@@ -414,7 +501,7 @@
   text-align: center;
   max-width: 800px;
   margin: 0 auto 1rem auto;
-  font-size: 1.05rem;
+  font-size: var(--about-font-size);
   line-height: 1.5;
 }
 
@@ -433,27 +520,5 @@
 
 /* Adjust main content positioning */
 .personal-website {
-  padding-top: 1rem;
-}
-
-/* Dark mode contact adjustments */
-.dark .contact-item {
-  background: #1e2936;
-  border-color: #2d3e52;
-}
-
-.dark .contact-item:hover {
-  background: #253342;
-}
-
-.dark .contact-item strong {
-  color: white;
-}
-
-.dark .contact-item a {
-  color: #7cb8ff;
-}
-
-.dark .contact-item a:hover {
-  color: #a0c9ff;
+  padding-top: var(--page-padding-top);
 }
