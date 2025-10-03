@@ -19,13 +19,13 @@
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "fe62f3e5",
+      "fileHash": "7b54e1a3",
       "needsInterop": false
     },
     "vue-router": {
       "src": "../../../../node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "file": "vue-router.js",
-      "fileHash": "4cf32dc6",
+      "fileHash": "a8cf859f",
       "needsInterop": false
     }
   },

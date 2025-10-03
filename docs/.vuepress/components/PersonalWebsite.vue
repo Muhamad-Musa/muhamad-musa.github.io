@@ -58,7 +58,7 @@
     <!-- Contact Section -->
     <section id="contact">
       <h2>Contact Me</h2>
-      <p>I'd love to hear from you! You can reach out through any of the following:</p>
+      <p>For more information, contact me.</p>
       <div class="contact-info">
         <div class="contact-item">
           <div class="contact-icon">
