@@ -13,11 +13,11 @@ export default defineUserConfig({
   ],
 
   theme: defaultTheme({
-    logo: '/assets/image.png',
+    // Logo removed from navbar
     
     navbar: [
       { text: 'Home', link: '/' },
-  { text: 'Projects', link: '/projects' },
+      { text: 'Projects', link: '/projects' },
       { text: 'About', link: '/#about-me' },
       { text: 'Skills', link: '/#skills-interests' },
       { text: 'Contact', link: '/#contact' }

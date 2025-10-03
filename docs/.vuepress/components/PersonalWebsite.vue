@@ -16,15 +16,17 @@
       
       <!-- Social Links -->
       <div class="social-links">
-        <a href="https://github.com/muhamad-musa" target="_blank" class="social-link github" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
         <a href="https://www.linkedin.com" target="_blank" class="social-link linkedin" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
         <a href="https://www.instagram.com" target="_blank" class="social-link instagram" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
+      </div>
+
+      <!-- Projects Button -->
+      <div class="hero-actions">
+        <a href="/projects" class="action-button primary">View My Projects</a>
       </div>
     </div>
 
@@ -55,7 +57,7 @@
 
     <!-- Contact Section -->
     <section id="contact">
-      <h2>Contact</h2>
+      <h2>Contact Me</h2>
       <p>I'd love to hear from you! You can reach out through any of the following:</p>
       <div class="contact-info">
         <div class="contact-item">
