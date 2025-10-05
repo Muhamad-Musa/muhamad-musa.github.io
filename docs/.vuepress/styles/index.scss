@@ -165,6 +165,8 @@ html.dark,
   margin: 0 auto;
   padding: var(--spacing-sm) var(--page-padding) 0;
   text-align: center;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
   
   section {
     margin: var(--spacing-lg) 0;
