@@ -122,38 +122,9 @@ html.dark,
 // ANIMATIONS
 // =============================================================================
 
-@keyframes float {
-  0% {
-    transform: translateY(100vh) rotate(0deg);
-    opacity: 0;
-  }
-  10%, 90% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateY(-10vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
-}
-
-.particles-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.particle {
-  position: absolute;
-  background: var(--primary-color);
-  border-radius: var(--border-radius-full);
-  opacity: 0.3;
-  animation: float linear infinite;
 }
 
 // =============================================================================

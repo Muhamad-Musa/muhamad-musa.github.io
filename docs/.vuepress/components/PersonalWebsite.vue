@@ -1,8 +1,5 @@
 <template>
   <div class="personal-website">
-    <!-- Particles Container -->
-    <div class="particles-container" ref="particlesContainer"></div>
-    
     <!-- Hero Section -->
     <div class="custom-hero">
       <div class="hero-profile-image">
@@ -98,31 +95,7 @@ import { onMounted, ref } from 'vue'
 export default {
   name: 'PersonalWebsite',
   setup() {
-    const particlesContainer = ref(null)
     const typewriterText = ref(null)
-
-    const createParticles = () => {
-      if (!particlesContainer.value) return
-      
-      const particleCount = 25
-      
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div')
-        particle.className = 'particle'
-        
-        // Random positioning and timing
-        particle.style.left = Math.random() * 100 + '%'
-        particle.style.animationDelay = Math.random() * 5 + 's'
-        particle.style.animationDuration = (Math.random() * 5 + 8) + 's'
-        
-        // Fixed size for visibility
-        const size = Math.random() * 4 + 4
-        particle.style.width = size + 'px'
-        particle.style.height = size + 'px'
-        
-        particlesContainer.value.appendChild(particle)
-      }
-    }
 
     const typeWriter = () => {
       if (!typewriterText.value) return
@@ -143,12 +116,10 @@ export default {
     }
 
     onMounted(() => {
-      createParticles()
       typeWriter()
     })
 
     return {
-      particlesContainer,
       typewriterText
     }
   }
